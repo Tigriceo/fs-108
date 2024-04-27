@@ -2,91 +2,132 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mobileapp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
-
   <body>
-    <header class="header">
-      <div class="container header-block">
-        <a href="#" class="logo">Mobileapp</a>
-        <nav>
-          <ul class="header-menu lsn">
-            <li><a href="#" class="header-menu-link">HOME</a></li>
-            <li><a href="#" class="header-menu-link">FEATURES</a></li>
-            <li><a href="#" class="header-menu-link">TEAM</a></li>
-            <li><a href="#" class="header-menu-link">TESTIMONIALS</a></li>
-            <li><a href="#" class="header-menu-link">CONTACT</a></li>
+    <header class="page-header">
+      <div class="container">
+        <nav class="page-header-nav">
+          <a class="logo" href="./index.html">Mobileapp</a>
+          <ul class="menu">
+            <li class="menu-item">
+              <a class="menu-link" href="./index.html">HOME</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="">FEATURES</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="">TEAM</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="">TESTIMONIALS</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="">CONTACT</a>
+            </li>
           </ul>
+          <button class="header-btn-open" type="button">
+            <svg class="header-btn-icon" width="24" height="14">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
         </nav>
+        <div class="header-mobile">
+          <div class="container header-mobile-container">
+            <div class="header-mobile-top">
+              <a class="logo" href="./index.html">Mobileapp</a>
+              <button class="header-btn-close" type="button">
+                <svg class="header-btn-close-icon" width="19" height="19">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            <nav class="header-mobile-nav">
+              <ul class="header-mobile-menu">
+                <li class="header-mobile-item">
+                  <a class="header-mobile-link" href="./index.html">HOME</a>
+                </li>
+                <li class="header-mobile-item">
+                  <a class="header-mobile-link" href="">FEATURES</a>
+                </li>
+                <li class="header-mobile-item">
+                  <a class="header-mobile-link" href="">TEAM</a>
+                </li>
+                <li class="header-mobile-item">
+                  <a class="header-mobile-link" href="">TESTIMONIALS</a>
+                </li>
+                <li class="header-mobile-item">
+                  <a class="header-mobile-link" href="">CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
-    <main>
-      <section>
-        <div>
-          <h1>Introducing Mobileapp</h1>
-          <p>Maecenas vitae tellus sapien. Prasent</p>
-          <ul>
-            <li>semper scelerisque tristique a enim</li>
-            <li>Integer ut mattis nulla, eget vehicula elit</li>
-            <li>Prasent rutrum ac nunc et</li>
+    <div class="page-main">
+      <section class="hero">
+        <div class="container hero-container">
+          <h1 class="hero-title">Introducing Mobileapp</h1>
+          <h2 class="hero-subtitle">Maecenas vitae tellus sapien. Prasent</h2>
+          <ul class="hero-list">
+            <li class="hero-item">semper scelerisque tristique a enim</li>
+            <li class="hero-item">
+              Integer ut mattis nulla, eget vehicula elit
+            </li>
+            <li class="hero-item">Prasent rutrum ac nunc et</li>
           </ul>
-          <button type="button">Download</button>
+          <button class="button hero-button" type="button">
+            <span class="text-above">Download</span>
+          </button>
+          <div class="hero-wrapp-img">
+            <img
+              class="hero-img-mobile"
+              srcset="
+                ./images/hero/phone-mobile.png    1x,
+                ./images/hero/phone-mobile@2x.png 2x
+              "
+              src="./images/hero/phone-mobile.png"
+              alt="image phone"
+            />
+            <img
+              class="hero-img-tablet"
+              srcset="
+                ./images/hero/phone-tablet.png    1x,
+                ./images/hero/phone-tablet@2x.png 2x
+              "
+              src="./images/hero/phone-tablet.png"
+              alt="image phone"
+            />
+            <img
+              class="hero-img-desktop"
+              srcset="
+                ./images/hero/phone-desktop.png    1x,
+                ./images/hero/phone-desktop@2x.png 2x
+              "
+              src="./images/hero/phone-desktop.png"
+              alt="image phone"
+            />
+          </div>
         </div>
       </section>
-      <section>
-        <div class="container">
-          <h2>WATCH THE VIDEO</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            fringilla fringilla nisl congue congue. Maecenas nec condimentum
-            libero, at elementum mauris. Phasellus eget nisi dapibus, ultricies
-            nisl at, hendrerit risusuis ornare luctus id sollicitudin ante
-            lobortis at.
-          </p>
-          <ul>
-            <li>
-              <a href="#">
-                <img
-                  src="./images/icons/apple.svg"
-                  alt="apple icon"
-                  width="32"
-                  height="36"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./images/icons/android.svg"
-                  alt="android icon"
-                  width="32"
-                  height="36"
-                />
-              </a>
-            </li>
-          </ul>
-          <img
-            src="./images/video/phone.png"
-            alt="image phone"
-            width="501"
-            height="285"
-          />
-        </div>
-      </section>
-    </main>
-    <footer></footer>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
