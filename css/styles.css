@@ -45,6 +45,21 @@ img {
   padding: 0 20px;
 }
 
+.section-title {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .page-header {
   margin-top: 20px;
   background: linear-gradient(
@@ -281,4 +296,58 @@ img {
   position: absolute;
   bottom: -59px;
   right: 0px;
+}
+
+.features {
+  background-color: #fff;
+  background-image: linear-gradient(
+    -232deg,
+    rgba(0, 197, 235, 0.1),
+    rgba(180, 68, 254, 0.1),
+    #fff
+  );
+  background-repeat: no-repeat;
+  background-size: auto 345px;
+  color: #000;
+}
+
+.features-container {
+  padding: 40px 20px;
+}
+
+.features-title {
+  margin-bottom: 40px;
+}
+
+.features-list {
+  padding-top: 510px;
+  background-image: url(../images/features/bg.png);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+  background-size: 280px 409px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.features-item-title {
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.features-item-title::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url("../images/icons/fuatures-icon.png");
+}
+
+.features-item-text {
+  font-weight: 500;
+  padding-left: 40px;
 }

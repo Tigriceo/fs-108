@@ -1,3 +1,9 @@
+@media (min-resolution: 192dpi) {
+  .features-list {
+    background-image: url(../images/features/bg@2x.png);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 32px;
@@ -35,6 +41,7 @@
   .hero-item {
     font-size: 16px;
   }
+
   .hero-button {
     margin: 0;
   }
@@ -53,6 +60,37 @@
 
   .hero-img-tablet {
     display: block;
+  }
+
+  .features {
+    background-image: none;
+  }
+
+  .features-container {
+    padding: 100px 32px 80px 0;
+  }
+
+  .features-text {
+    margin-bottom: 40px;
+  }
+
+  .features-list {
+    position: relative;
+    padding: 0 58px 0 0;
+    align-items: flex-end;
+    row-gap: 80px;
+    background-position: -92px 0;
+    background-size: auto 592px;
+  }
+
+  .features-item {
+    max-width: 278px;
+  }
+
+  .features-item:last-child {
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
   }
 }
 
@@ -75,5 +113,31 @@
 
   .hero-img-desktop {
     display: block;
+  }
+
+  .features-container {
+    padding: 100px 130px 50px 130px;
+  }
+
+  .features-title {
+    margin-bottom: 80px;
+  }
+
+  .features-text {
+    margin-bottom: 0;
+  }
+
+  .features-list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-position: center;
+    background-size: 396px 601px;
+    column-gap: 453px;
+    padding: 100px 0 100px 0;
+  }
+
+  .features-item:last-child {
+    position: static;
   }
 }
