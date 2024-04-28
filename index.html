@@ -81,7 +81,7 @@
         </div>
       </div>
     </header>
-    <div class="page-main">
+    <main class="page-main">
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">Introducing Mobileapp</h1>
@@ -348,7 +348,96 @@
           </ul>
         </div>
       </section>
-    </div>
+      <section class="contacts">
+        <div class="container contacts-container">
+          <h3 class="contacts-title section-title">CONTACT US</h3>
+          <div class="contacts-content">
+            <form
+              class="form"
+              name="form"
+              autocomplete="off"
+              placeholder="Name"
+            >
+              <div class="form-field">
+                <input
+                  class="form-input"
+                  type="text"
+                  name="user-name"
+                  placeholder="Name"
+                />
+                <input
+                  class="form-input"
+                  type="email"
+                  name="user-email"
+                  placeholder="Email"
+                />
+              </div>
+              <textarea
+                class="form-textarea"
+                name="user-comment"
+                placeholder="Message"
+              ></textarea>
+              <button class="button contacts-button" type="submit">
+                <span class="text-above">SUBMIT</span>
+              </button>
+            </form>
+            <div class="contacts-about">
+              <h4 class="contacts-subtitle">Get in touch with us</h4>
+              <p class="contacts-text">
+                Nunc urna est, tristique et varius at, pharetra nec enim.
+                Quisque rhoncus lacus fringilla nulla sollicitudin tristique.
+              </p>
+              <ul class="contacts-social">
+                <li class="contacts-social-item">
+                  <a class="contacts-social-link" href="">
+                    <svg class="contacts-social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contacts-social-item">
+                  <a class="contacts-social-link" href="">
+                    <svg class="contacts-social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="contacts-social-item">
+                  <a class="contacts-social-link" href="">
+                    <svg class="contacts-social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <address class="contacts-address">
+                <ul class="contacts-address-list">
+                  <li class="contacts-address-item">
+                    <a class="contacts-address-link" href="tel:+xxxxxxxxxxxx"
+                      >+xx-xxxx-xxxx-xx</a
+                    >
+                  </li>
+                  <li class="contacts-address-item">
+                    <a
+                      class="contacts-address-link"
+                      href="mailto:goIteens@gmail.com"
+                      >goIteens@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container footer-container">
+        <p class="footer-text">
+          &copy;2019 GoIteens Template. All Rights Reserved
+        </p>
+      </div>
+    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>
