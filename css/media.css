@@ -199,7 +199,7 @@
   }
 
   .modal {
-    width: 571px;
+    width: 575px;
   }
 
   .modal-container {
@@ -353,6 +353,7 @@
   .contacts-content {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 148px;
   }
 
