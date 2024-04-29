@@ -22,6 +22,7 @@ button {
 }
 
 a {
+  display: inline-block;
   color: inherit;
   text-decoration: none;
 }
@@ -38,9 +39,23 @@ img {
   max-width: 100%;
 }
 
-input {
+input,
+label {
   display: block;
   border: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#00c5eb 0%, #b544fe 100%);
+  border-radius: 10px;
 }
 
 .container {
@@ -221,12 +236,15 @@ input {
 }
 
 .button {
-  min-width: 200px;
+  width: 200px;
   height: 42px;
   border-radius: 5px;
   font-weight: 700;
   font-family: inherit;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background-image: linear-gradient(99deg, #00c5eb, #b544fe);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -552,6 +570,7 @@ input {
 .contacts-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 40px;
 }
 
@@ -671,4 +690,190 @@ input {
   max-width: 193px;
   font-weight: 500;
   font-size: 14px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #06071b;
+  height: 94%;
+  overflow-y: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-container {
+  position: relative;
+  padding: 48px 24px;
+  margin: 0 auto;
+}
+
+.modal-title {
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.modal-form {
+  margin-bottom: 28px;
+}
+
+.modal-form-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 22px;
+}
+
+.modal-form-item {
+  max-width: 233px;
+  min-height: 394px;
+  border-radius: 6px;
+  border: 1px double transparent;
+  background-image: linear-gradient(#06071b, #06071b),
+    linear-gradient(to right, #00c5eb, #b544fe);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.modal-form-item-content {
+  padding: 28px 20px;
+  min-height: 394px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form-icon {
+  fill: #fff;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.modal-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-form-include {
+  font-size: 14px;
+  line-height: 1.7;
+  display: flex;
+  column-gap: 4px;
+}
+
+.modal-form-include:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.modal-form-include-icon {
+  margin-top: 4px;
+  fill: #fff;
+}
+
+.modal-form-checkbox:checked + .modal-form-item-content {
+  background-image: linear-gradient(to right, #00c5eb, #b544fe);
+}
+
+.modal-text {
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.modal-info-app-lists {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.modal-info-app-list:first-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.modal-info-app-list:last-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.modal-info-app-list {
+  width: 232px;
+  border-radius: 6px;
+  border: 1px double transparent;
+  background-image: linear-gradient(#06071b, #06071b),
+    linear-gradient(to right, #00c5eb, #b544fe);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.modal-info-app {
+  padding: 20px;
+}
+
+.modal-info-app-item {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.modal-info-app-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.modal-info-app-icon {
+  fill: #fff;
+}
+
+.modal-info-app-content {
+  font-size: 12px;
+}
+
+.modal-info-app-label {
+  margin-bottom: 4px;
+}
+
+.modal-info-app-sublabel {
+  color: #1ab9fd;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  fill: #fff;
 }
