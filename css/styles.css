@@ -877,3 +877,7 @@ label {
   background-color: transparent;
   fill: #fff;
 }
+
+.modal-button {
+  width: 100%;
+}
